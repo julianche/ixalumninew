@@ -6,7 +6,9 @@
     <%= f.input :session, collection: ["A","1", "2", "3"], label: "Session", as: :select, :include_blank => false  %>
     <%= f.input :university, label: "University" %>
     <%= f.input :city, label: "City" %>
-    <%= f.label :country %>
+    <%= f.input :occupation %>
+    <%= f.input :degree %>
+
     <%= f.country_select(:country, ["United States", "South Africa"]) %>
 
 
