@@ -1,0 +1,17 @@
+<h1>Here's your profile</h1>
+<h1><%=@name%><%= @surname %></h1>
+____________________________________________________________________
+
+<li>iXyear: <%=@profile.ixyear%></li>
+<li>session: <%=@profile.session%></li>
+<li>degree: <%=@profile.degree%></li>
+<li>university: <%=@profile.university%></li>
+<li>occupation: <%=@profile.occupation%></li>
+<li>city: <%=@profile.city%></li>
+<li>country: <%=@profile.country%></li>
+
+<h2>Contact details</h2>
+<li>email: <%=current_user.email%></li>
+
+<%= link_to "Back", home_path %>
+

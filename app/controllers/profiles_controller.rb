@@ -5,6 +5,12 @@ class ProfilesController < ApplicationController
 		@profile = Profile.new
 	end
 
+	def show
+		@profile = current_user.profile
+		@name = current_user.firstname
+		@surname = current_user.lastname
+	end
+
 	def create
 	    @profile = Profile.new(profile_params)
 	    @profile.user = current_user
