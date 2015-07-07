@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
 	has_many :posts
 	has_one :profile
+	validates_presence_of :firstname, :lastname
 
 	# after_create :add_profile
 	# after_create :build_profile #
