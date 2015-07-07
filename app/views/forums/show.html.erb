@@ -6,3 +6,9 @@
               data: { confirm: 'Are you sure?' } %></p>
 
 <%= link_to 'Forum Index', forums_path %> 
+
+<% if @forum.posts.count > 0 %>
+	<%= render @forum.posts.reverse %>
+<% end %>
+
+<%= render 'posts/form' %>

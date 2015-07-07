@@ -20,6 +20,7 @@ class ForumsController < ApplicationController
 
   def show
     @forum = Forum.find(params[:id])
+    @post = Post.new
     render 'show'
   end 
 
