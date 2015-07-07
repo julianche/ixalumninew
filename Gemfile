@@ -22,6 +22,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+<<<<<<< HEAD
 #devise gem to authenticate user
 gem "devise"
 
@@ -29,6 +30,16 @@ gem "simple_form"
 
 gem "paperclip"
 #for uploading images from local device
+=======
+
+gem 'twitter-bootstrap-rails'
+
+gem 'simple_form'
+
+gem 'devise'
+
+gem 'country_select'
+>>>>>>> 3af737174959fb9d086771b932d2911e1275a1d9
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -43,6 +54,10 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
+<<<<<<< HEAD
+=======
+  gem 'pry-rails'
+>>>>>>> 3af737174959fb9d086771b932d2911e1275a1d9
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
