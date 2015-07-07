@@ -1,6 +1,6 @@
-<p><strong>
-<%= @user %>
-</strong>
-<%= post.title%> <br>
+<p>
+<%= post.user.firstname %>
+<%= post.title %>
+<%= link_to 'Show', forum_post_path(@forum, post) %>  <br>
 <%= post.body %>
 </p>
