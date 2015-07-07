@@ -1,12 +1,7 @@
 Rails.application.configure do
-<<<<<<< HEAD
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  # Settings specified here will take precedence over those in config/application.rb.
 
-=======
   # Settings specified here will take precedence over those in config/application.rb.
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
->>>>>>> 3af737174959fb9d086771b932d2911e1275a1d9
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.

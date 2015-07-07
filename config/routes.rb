@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-  devise_for :users
-  
-=======
+
   devise_for :users, :controllers => { registrations: 'registrations' }
 
   resources :profiles
@@ -12,20 +9,14 @@ Rails.application.routes.draw do
   end 
 
 
-
->>>>>>> 3af737174959fb9d086771b932d2911e1275a1d9
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-<<<<<<< HEAD
-  # root 'welcome#index'
-=======
  root "welcome#welcome"
 
  get "/home", to: "welcome#home"
 
->>>>>>> 3af737174959fb9d086771b932d2911e1275a1d9
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

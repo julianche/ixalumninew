@@ -11,9 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150705200503) do
-=======
 ActiveRecord::Schema.define(version: 20150707142256) do
 
   create_table "comments", force: :cascade do |t|
@@ -61,7 +58,6 @@ ActiveRecord::Schema.define(version: 20150707142256) do
   end
 
   add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
->>>>>>> 3af737174959fb9d086771b932d2911e1275a1d9
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -76,11 +72,6 @@ ActiveRecord::Schema.define(version: 20150707142256) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-<<<<<<< HEAD
-  end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-=======
     t.string   "firstname"
     t.string   "lastname"
     t.integer  "profile_id"
@@ -88,7 +79,6 @@ ActiveRecord::Schema.define(version: 20150707142256) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
   add_index "users", ["profile_id"], name: "index_users_on_profile_id"
->>>>>>> 3af737174959fb9d086771b932d2911e1275a1d9
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end
