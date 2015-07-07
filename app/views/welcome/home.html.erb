@@ -1,5 +1,3 @@
 This is your home page
 
-<p> <%= link_to 'Your Profile', profile_path([current_user.id]) %> </p>
-<p> <%= link_to 'Alumni Database', profiles_path %> </p>
-<p> <%= link_to 'Forums', forums_path %> </p>
+<p><%= link_to 'Your Profile', profile_path([current_user.id]) %> | <%= link_to 'Alumni Database', profiles_path %> | <%= link_to 'Forums', forums_path %> </p>
