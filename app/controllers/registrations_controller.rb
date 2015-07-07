@@ -3,6 +3,7 @@ class RegistrationsController < Devise::RegistrationsController
   private
 
   def after_sign_in_path_for(user)
+  	# if user.profile == true
   	# does user have a profile?
   	# if not, send to new_profile_path
   	# otherwise, go to whatever
