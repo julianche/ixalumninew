@@ -1,10 +1,9 @@
 class WelcomeController < ApplicationController
 
 	def welcome
-		if current_user.sign_in_count == 1
+		if current_user.profile == nil
+			# with redirect to profiole index it says no data received.
 			redirect_to new_profile_path
-		else
-			render "index"
 		end
 	end
 	def index

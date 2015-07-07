@@ -3,6 +3,7 @@ class ForumsController < ApplicationController
   end
 
   def home
+  
   end
 
   def edit
@@ -14,6 +15,6 @@ class ForumsController < ApplicationController
   def new
   end
 
-  def destory
+  def 
   end
 end
