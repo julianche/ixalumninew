@@ -7,6 +7,7 @@ class WelcomeController < ApplicationController
 			redirect_to home_path
 		end
 	end
+	
 	def index
 	end 
 

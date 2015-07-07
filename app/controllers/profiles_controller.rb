@@ -6,7 +6,7 @@ class ProfilesController < ApplicationController
 	end
 
 	def create
-	    @profile = current_user.build_profile(profile_params)
+	    @profile = current_user.build(profile_params)
 	    if @profile.save
 	    	redirect_to home_path
 	    else
