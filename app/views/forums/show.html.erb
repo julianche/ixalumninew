@@ -1,0 +1,8 @@
+<h1><%= @forum.name %> </h1>
+<p><%= @forum.description %> </p>
+
+<p><%= link_to 'Edit', edit_forum_path(@forum) %> | <%= link_to 'Destroy', forum_path(@forum),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></p>
+
+<%= link_to 'Forum Index', forums_path %> 
