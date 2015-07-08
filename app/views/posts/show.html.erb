@@ -1,1 +1,6 @@
-Hello
+<h1> <%= @post.title %> </h1>
+<p><%= @post.body %> </p>
+
+<p><%= link_to 'Edit', edit_forum_post_path(@forum, @post) %> | <%= link_to 'Destroy', forum_post_path(@forum, @post),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></p>
