@@ -1,18 +1,20 @@
-<%= simple_form_for(@profile, html: { class: 'form-horizontal' }) do |f| %>
-  <%= f.error_notification %>
+<div class = "form" >
+  <%= simple_form_for(@profile, html: { class: 'form-horizontal' }) do |f| %>
+    <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :ixyear, collection: ["2014", "2015"], label: 'Year', as: :select, :include_blank => false %>
-    <%= f.input :session, collection: ["A","1", "2", "3"], label: "Session", as: :select, :include_blank => false  %>
-    <%= f.input :university, label: "University" %>
-    <%= f.input :city, label: "City" %>
-    <%= f.input :occupation %>
-    <%= f.input :degree %>
-    <%= f.label "Country" %>
-    <%= f.country_select(:country, ["United States", "South Africa"]) %>
-  </div>
+    <div class="form-inputs">
+      <%= f.input :ixyear, collection: ["2014", "2015"], label: 'Year', as: :select, :include_blank => false %>
+      <%= f.input :session, collection: ["A","1", "2", "3"], label: "Session", as: :select, :include_blank => false  %>
+      <%= f.input :university, label: "University", placeholder: "e.g University of Harvard" %>
+      <%= f.input :city, label: "City" %>
+      <%= f.input :occupation %>
+      <%= f.input :degree, placeholder: "e.g BCom Accounting, MBCHB" %>
+      <%= f.label "Country" %>
+      <%= f.country_select(:country, ["United States", "South Africa"]) %>
+    </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+    <div class="form-actions">
+      <%= f.button :submit %>
+    </div>
+  <% end %>
+</div>

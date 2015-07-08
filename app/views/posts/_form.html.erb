@@ -1,5 +1,7 @@
-<%= simple_form_for [@forum, @post] do |f| %>
-	<%= f.input :title %>
-	<%= f.input :body %>
-	<%= f.submit %>
-<% end %>
+<div class = "form" >
+	<%= simple_form_for [@forum, @post] do |f| %>
+		<%= f.input :title %>
+		<%= f.input :body %>
+		<%= f.submit %>
+	<% end %>
+</div>

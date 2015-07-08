@@ -16,7 +16,7 @@ Rails.application.routes.draw do
  root "welcome#welcome"
 
  get "/home", to: "welcome#home"
- get "/search", to: "welcome#search"
+ get "/search", to: "profiles#search"
 
 
   # Example of regular route:
