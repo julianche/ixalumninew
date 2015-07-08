@@ -6,4 +6,8 @@ class Profile < ActiveRecord::Base
 						# :url  => "/assets/:id/:style/:basename.:extension",
  					# 	:path => ":rails_root/public/assets/:id/:style/:basename.:extension"
 	validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+
+	def self.search(query)
+		where("occupation LIKE ? or city LIKE ?", "%#{query}%", "%#{query}%")
+	end
 end

@@ -1,3 +1,22 @@
-<h1>Thank you for creating your profile</h1>
+<!-- <h1>Thank you for creating your profile</h1>
 
-<%= current_user.profile %>
+<%= current_user.profile %> -->
+
+<h1> Search for alumni in database</h1>
+<p><%= link_to "Back", home_path %></p>
+
+<%= form_tag profiles_search_path, method: :get do %>
+	<%= text_field_tag :q, params[:q] %>
+	<%= submit_tag "Search" %>
+<% end %>
+
+<div class ="profiles_list">
+	<ul>
+		<% @profiles.each do |profile| %>
+		<li>
+		<%= link_to profile.firstname, profile_path(profile) %> |
+		<%= profile.city %> |
+		<%= profile.university %>
+	<% end %>
+		</li>
+	</ul>
