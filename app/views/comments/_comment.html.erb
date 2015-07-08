@@ -1,1 +1,4 @@
-<p><strong><%= comment.user.firstname %></strong>: <%= comment.body %></p>
+<p><strong><%= comment.user.firstname %></strong>: <%= comment.body %></p><%= comment.created_at %>
+<%= link_to 'Destroy Comment', [comment.post, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
