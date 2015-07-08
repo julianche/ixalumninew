@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
   devise_for :users, :controllers => { registrations: 'registrations' }
 
+ get "/profiles/search" => "profiles#search"
+
   resources :profiles
 
   resources :forums do
@@ -20,7 +22,6 @@ Rails.application.routes.draw do
  root "welcome#welcome"
 
  get "/home", to: "welcome#home"
- get "/search", to: "profiles#search"
 
 
   # Example of regular route:

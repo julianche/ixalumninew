@@ -6,4 +6,8 @@ class Profile < ActiveRecord::Base
   	validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 	validates_presence_of :occupation, :degree, :city, :ixyear, :session, :country, :university
 	belongs_to :user
+
+	def self.search(query)
+		where("occupation LIKE ? or city LIKE ?", "%#{query}%", "%#{query}%")
+	end
 end

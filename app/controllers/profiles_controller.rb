@@ -1,5 +1,11 @@
 class ProfilesController < ApplicationController
 	def index
+		@profiles = Profile.all
+	end 
+
+	def search
+		@profiles = Profile.search(params[:q])
+		render :index
 	end
 
 	def new 
@@ -7,15 +13,16 @@ class ProfilesController < ApplicationController
 	end
 
 	def show
-		@profile = current_user.profile
-		@name = current_user.firstname
-		@surname = current_user.lastname
+		@profile = Profile.find(params[:id])
+		@name = @profile.firstname
+		@surname = @profile.lastname
 	end
 
 	def create
 	    @profile = Profile.new(profile_params)
 	    @profile.user = current_user
-	    # @profile.name = current_user.name
+	    @profile.firstname = current_user.firstname
+	    @profile.lastname = current_user.lastname
 	    if @profile.save
 	    	redirect_to home_path
 	    else
@@ -36,9 +43,6 @@ class ProfilesController < ApplicationController
 		end
 	end
 
-	def search
-		@profiles = User.all
-	end
 
 	private
 	def profile_params
