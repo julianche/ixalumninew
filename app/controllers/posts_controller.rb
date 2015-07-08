@@ -19,6 +19,7 @@ class PostsController < ApplicationController
 	def show
 		@forum = Forum.find(params[:forum_id])
 		@post = @forum.posts.find(params[:id])
+		@comment = Comment.new(:post => @post)
 	end 
 
 
@@ -30,7 +31,8 @@ class PostsController < ApplicationController
 
 
 	def index
-		@post = Post.all
+		@posts = Forum.find(params[:forum_id]).posts
+		#@post = Post.all
 	end 
 
 	def update
