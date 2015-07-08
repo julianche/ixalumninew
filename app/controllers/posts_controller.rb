@@ -5,14 +5,14 @@ class PostsController < ApplicationController
 
 	def create
 		@forum = Forum.find(params[:forum_id])
-		@post = @forum.posts.build(params[:id])
+		@post = @forum.posts.build(post_params)
 		@post.user = current_user
 		# @user = User.find(params:[:user_id])
 		# @user = User.find(params[:user_id])
 		if @post.save 
 			redirect_to @forum
 		else 
-			render @post
+			render 'new'
 		end
 	end 
 
@@ -44,10 +44,10 @@ class PostsController < ApplicationController
 	end 
 
 	def destroy
-		@forum = Forum.find(params[:forum_id])
-		@post = @forum.posts.find(params[:id])
+		@forum = Forum.find params[:forum_id]
+		@post = Post.find(params[:id])
 		@post.destroy
-		redirect_to forum_path
+		redirect_to @forum
 	end 
 	
 
@@ -55,6 +55,6 @@ class PostsController < ApplicationController
 
 
 	def post_params
-		params.require(:post).permit(:title, :body)
+		params.require(:post).permit(:title, :body, :forum_id)
 	end 
 end 

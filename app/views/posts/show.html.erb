@@ -4,3 +4,5 @@
 <p><%= link_to 'Edit', edit_forum_post_path(@forum, @post) %> | <%= link_to 'Destroy', forum_post_path(@forum, @post),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></p>
+
+<p><%= link_to 'Back to Forum', forum_path(@forum) %>
