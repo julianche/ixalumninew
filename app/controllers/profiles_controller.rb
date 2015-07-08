@@ -1,6 +1,7 @@
 class ProfilesController < ApplicationController
 	def index
 	end
+
 	def new 
 		@profile = Profile.new
 	end
@@ -14,6 +15,7 @@ class ProfilesController < ApplicationController
 	def create
 	    @profile = Profile.new(profile_params)
 	    @profile.user = current_user
+	    # @profile.name = current_user.name
 	    if @profile.save
 	    	redirect_to home_path
 	    else
@@ -32,6 +34,10 @@ class ProfilesController < ApplicationController
 		else
 			render "form"
 		end
+	end
+
+	def search
+		@profiles = User.all
 	end
 
 	private
