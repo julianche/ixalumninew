@@ -1,6 +1,5 @@
 Rails.application.configure do
-  Paperclip.options[:command_path] = "/usr/bin/"
-  config.serve_static_files = true
+  # config.serve_static_files = true
 
   # Settings specified here will take precedence over those in config/application.rb.
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }

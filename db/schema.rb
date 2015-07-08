@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150708130633) do
+ActiveRecord::Schema.define(version: 20150708153029) do
 
   create_table "comments", force: :cascade do |t|
     t.text     "body"
@@ -43,25 +43,8 @@ ActiveRecord::Schema.define(version: 20150708130633) do
   add_index "posts", ["forum_id"], name: "index_posts_on_forum_id"
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
-  create_table "profiles", force: :cascade do |t|
-    t.string   "occupation"
-    t.string   "degree"
-    t.integer  "ixyear"
-    t.string   "session"
-    t.string   "university"
-    t.string   "city"
-    t.string   "country"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.integer  "user_id"
-    t.string   "email"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
-  end
-
-  add_index "profiles", ["user_id"], name: "index_profiles_on_user_id"
+# Could not dump table "profiles" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

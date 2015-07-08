@@ -1,12 +1,9 @@
 <h1>Here's your profile</h1>
 <h1><%=@name%><%= @surname %></h1>
 
-<p>
- <%= image_tag @profile.image.url(:medium) %>
-</p>
-
 <%= link_to "Edit profile", edit_profile_path(@profile) %>
 
+<%= image_tag @profile.image.url %>
 <li>iXyear: <%=@profile.ixyear%></li>
 <li>session: <%=@profile.session%></li>
 <li>degree: <%=@profile.degree%></li>
