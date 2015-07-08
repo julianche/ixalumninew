@@ -31,7 +31,9 @@ gem 'devise'
 
 gem 'country_select'
 
-gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
+gem "paperclip", "~> 4.3"
+
+gem "fog"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
