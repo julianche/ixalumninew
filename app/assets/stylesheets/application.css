@@ -42,3 +42,20 @@
 .post-subtitle-profile {
 	text-align: center;
 }
+
+.welcome-header {
+	background-image: url('images/cape_town_overview.jpg');
+	height: 100vh;
+	text-align: center;
+}
+
+.homepage-heading {
+padding: 100px 0 50px;
+  color: white;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.profile {
+	text-align: center;
+}
+
