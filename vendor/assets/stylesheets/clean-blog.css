@@ -140,7 +140,7 @@ hr.small {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
 }
 .intro-header .site-heading,
 .intro-header .post-heading,
@@ -223,7 +223,19 @@ hr.small {
   margin-top: 30px;
   margin-bottom: 10px;
 }
+
 .post-preview > a > .post-subtitle {
+  margin: 0;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.post-preview > a > .post-title-profile {
+  font-size: 30px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.post-preview > a > .post-subtitle-profile {
   margin: 0;
   font-weight: 300;
   margin-bottom: 10px;
@@ -344,6 +356,16 @@ form .row:first-child .floating-label-form-group {
   border: 1px solid #0085a1;
   color: white;
 }
+
+.profile_table {
+border: 1px solid black;
+
+}
+
+.table-profile {
+
+}
+
 .pager {
   margin: 20px 0 0;
 }
@@ -393,3 +415,4 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: #0085a1;
 }
+

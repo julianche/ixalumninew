@@ -44,3 +44,11 @@
  	height: 50px;
  	background-image: url('img/post-bg.jpg') 
  }
+
+.post-title-profile {
+	text-align: center;
+}
+
+.post-subtitle-profile {
+	text-align: center;
+}
