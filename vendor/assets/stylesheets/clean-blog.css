@@ -9,17 +9,6 @@ body {
   font-size: 20px;
   color: #404040;
 }
-
-.home_bg {
-  background-image: url('images/cape_town_overview.jpg');
-  background: no-repeat center center;
-  background-attachment: scroll;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
-
 p {
   line-height: 1.5;
   margin: 30px 0;
