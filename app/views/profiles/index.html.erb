@@ -5,10 +5,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="site-heading">
+                    <div class="alumni-heading">
                         <h1>Alumni Database</h1>
                         <hr class="small">
-                        <span class="subheading">Browse your fellow IXers </span>
+                       
                     </div>
                 </div>
             </div>
@@ -41,10 +41,12 @@
 	            	<th> Session </th>
 	            	<th> University </th>
 	            	<th> Occupation </th>
-	        	
+                    <th colpan ="6"></th>
+	        	</tr>
         	</thead>
         	<tbody>
                  	<% @profiles.each do |profile| %>
+                    <tr>
 		            <td><%= link_to profile.firstname, profile_path(profile) %></td>
 		            <td><%=profile.ixyear %></td>
 		            <td><%=profile.session%></td>

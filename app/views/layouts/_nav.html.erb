@@ -22,7 +22,7 @@
        <!-- Collect the nav links, forms, and other content for toggling -->
        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
            <ul class="nav navbar-nav navbar-right">
-              <% if user_signed_in? %>
+              <% if current_user.sign_in_count != 1 %>
                <li>
                 <%=link_to 'Your Profile', profile_path(current_user.profile.id) %>
                </li>

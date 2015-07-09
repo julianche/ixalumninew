@@ -52,3 +52,31 @@
 .post-subtitle-profile {
 	text-align: center;
 }
+
+.intro-header {
+	background: cover;
+	height:100%;
+}
+.intro-page {
+background-image: url('images/cape_town_overview.jpg');
+height: 100vh;
+}
+
+.site-heading {
+	color:white;
+	text-align: center;
+}
+
+.link {
+	color:white;
+}
+
+.link:hover {
+	text-decoration: none;
+	color:white;
+}
+
+.alumni-heading {
+	color:black;
+	text-align: center;
+}
