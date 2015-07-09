@@ -1,23 +1,31 @@
-<div class="header">
+ <header class="intro-header" style="background-image: url(<%=@profile.image_url %>)
+">
+     <div class="container">
+         <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                 <div class="site-heading">
+                     <h1><%= @profile.firstname.capitalize %>'s profile </h1>
+
+                     <hr class="small">
+                     <span class="subheading"><%= link_to "Edit profile", edit_profile_path(@profile)%></span>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </header>
+
+
+<div class = "profile" >
+	<td><h3>iX year </h3><%=@profile.ixyear%></td>
+	<h3>Session </h3> <%=@profile.session%>
+	<h3>Degree </h3> <%=@profile.degree%>
+	<h3>University </h3> <%=@profile.university%>
+	<h3>Occupation </h3> <%=@profile.occupation%>
+	<h3>City </h3> <%=@profile.city%>
+	<h3>Country </h3> <%=@profile.country%>
+
+	<h2>Contact details</h2>
+	<h3>Email</h3> <%= current_user.email%>
 </div>
 
-
-<h1></h1>
-<h1><%= @profile.firstname %>'s Profile </h1>
-
-<%= link_to "Edit profile", edit_profile_path(@profile) %>
-
-<img src=<%=@profile.image_url %>>
-<li>iXyear: <%=@profile.ixyear%></li>
-<li>Session: <%=@profile.session%></li>
-<li>Degree: <%=@profile.degree%></li>
-<li>University: <%=@profile.university%></li>
-<li>Occupation: <%=@profile.occupation%></li>
-<li>City: <%=@profile.city%></li>
-<li>Country: <%=@profile.country%></li>
-
-<h2>Contact details</h2>
-<li>Email: <%= @profile.email%></li>
-
-<%= link_to "Back", home_path %>
 
