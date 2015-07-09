@@ -32,8 +32,9 @@
                 </div>
 <div class="row">
          <div class="col-lg-12">
-
+           
          <table class='table'>
+
             <thead>
             	<tr>
 	            	<th> Name </th>
@@ -41,12 +42,21 @@
 	            	<th> Session </th>
 	            	<th> University </th>
 	            	<th> Occupation </th>
+<<<<<<< HEAD
                     <th colpan ="6"></th>
 	        	</tr>
         	</thead>
         	<tbody>
                  	<% @profiles.each do |profile| %>
                     <tr>
+=======
+	        		<th colpan="6"></th>
+	        		</tr>
+        	</thead>
+        	<tbody>
+        	 <% @profiles.each do |profile| %>
+        			<tr>
+>>>>>>> bb160512dfdb3f92c05d06a087785780812cf68a
 		            <td><%= link_to profile.firstname, profile_path(profile) %></td>
 		            <td><%=profile.ixyear %></td>
 		            <td><%=profile.session%></td>
