@@ -14,10 +14,7 @@ class ProfilesController < ApplicationController
 
 	def show
 		@profile = Profile.find(params[:id])
-		@profile.firstname = current_user.firstname
-	    @profile.lastname = current_user.lastname
-		@name = @profile.firstname
-		@surname = @profile.lastname
+
 	end
 
 	def create
@@ -25,6 +22,7 @@ class ProfilesController < ApplicationController
 	    @profile.user = current_user
 	    @profile.firstname = current_user.firstname
 	    @profile.lastname = current_user.lastname
+	    @profile.email = current_user.email
 	    if @profile.save
 	    	redirect_to home_path
 
