@@ -1,6 +1,6 @@
 <h1>Create a new profile</h1>
 
-<h2>Hello <%= current_user.firstname %></h2>
-<p>Help the other iXers get to know you better by creating a profile</p>
+<h2>Hello <%= current_user.firstname.capitalize %></h2>
+<div class='profile-new'> <p>Help other iXers get to know you better by creating a profile</p> </div>
 
 <%= render "form" %>

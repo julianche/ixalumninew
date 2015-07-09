@@ -1,13 +1,13 @@
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+    <header class="intro-header" style="background-image: url('/images/experiencelearn.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                     <div class="site-heading">
-                        <h1>Forums</h1>
+                        <h1> <%= @forum.name %> </h1>
                         <hr class="small">
-                        <span class="subheading">Connect with your fellow iXers </span>
+                        <span class="subheading"> <%= @forum.description %> </span>
                         <p><%= link_to 'Edit', edit_forum_path(@forum) %> | <%= link_to 'Destroy', forum_path(@forum),
               method: :delete,
               data: { confirm: 'Are you sure?' } %></p>
@@ -21,8 +21,6 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                <h1><%= @forum.name %> </h1>
-                <p><%= @forum.description %> </p>
 
                 <% if @forum.posts.present? %>
                     <% @forum.posts.reverse.each do |post| %>
@@ -32,12 +30,12 @@
                                     <%= post.title %>
                                 </h2>
                             <% end %>
-                            <p class="post-meta">Posted by <a href="#"><%= post.user.firstname %></a> <%= time_ago_in_words(post.created_at) %> ago</p>
+                            <p class="post-meta">Posted by <%= post.user.firstname %></a> <%= time_ago_in_words(post.created_at) %> ago</p>
                         </div>
                         <hr>
                     <% end %>
                 <% else %>
-                    No posts here yet!
+                   <div class = "forum-description">  No posts here yet!
                 <% end %>
                 <!-- Pager -->
 <!--                 <ul class="pager">

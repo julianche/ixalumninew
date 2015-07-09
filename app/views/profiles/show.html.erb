@@ -1,5 +1,5 @@
 
-<header class="intro-header" style="background-color: black">
+<header class="intro-header" style="background-image: url('/images/stockphoto.jpg')">
      <div class="container">
          <div class="row">
              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -17,9 +17,11 @@
  </header>
 <br><br><br>
 
-<div class = "profile" >
-<img src="<%=@profile.image_url %>">
 
+    <div class = "profile_picture" >
+        <img src="<%=@profile.image_url %>">
+    </div>
+<div class = "profile" >
 	<td><h3>iX year </h3><%=@profile.ixyear%></td>
 	<h3>Session </h3> <%=@profile.session%>
 	<h3>Degree </h3> <%=@profile.degree%>

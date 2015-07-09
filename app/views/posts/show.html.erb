@@ -7,8 +7,9 @@
                  <div class="profile-name">
                      <div class="site-heading">
                          <h1><%= @post.title %></h1>
-
                          <hr class="small">
+                          <span class="subheading"> <%= @post.body %> </span>
+                          <p> <%= time_ago_in_words(@post.created_at) %> ago </p>
                          </div>
                      </div>
                  </div>
@@ -21,22 +22,21 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-			<h1> <%= @post.title %> </h1>
-			<p><%= @post.body %> </p>
 
-			<p><%= link_to 'Edit', edit_forum_post_path(@forum, @post) %> | <%= link_to 'Destroy', forum_post_path(@forum, @post),
-			              method: :delete,
-			              data: { confirm: 'Are you sure?' } %></p>
-
-			<p><%= link_to 'Back to Forum', forum_path(@forum) %></p>
 
 			<% if @post.comments.count > 0 %>
 				<%= render @post.comments.reverse %>
-				<%= @comment.created_at %>
+				<%= time_ago_in_words(@comment.created_at) unless @comment.created_at.blank? %>
 			<% end %> 
 
 
 			<%= render 'comments/form' %>
+
+			<div class= 'forum-description'> <p><%= link_to 'Edit', edit_forum_post_path(@forum, @post) %> | <%= link_to 'Destroy', forum_post_path(@forum, @post),
+			              method: :delete,
+			              data: { confirm: 'Are you sure?' } %></p>
+
+			<p><%= link_to 'Back to Forum', forum_path(@forum) %></p> </div>
 		</div>
 	</div>
 </div>

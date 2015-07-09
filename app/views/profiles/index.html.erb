@@ -1,18 +1,16 @@
-    <div class="header">
-    </div>    <!-- Page Header -->
+  <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-<<<<<<< HEAD
-    <header class="intro-header" style="background-image: <%= current_user.profile %>">
-=======
-    <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
->>>>>>> 7c5387b2fa31ab83fa18f1d32a7e003e9e59d227
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="alumni-heading">
+
+<header class="intro-header" style="background-image: url('/images/session2lionshead.jpg')">
+     <div class="container">
+         <div class="row">
+             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+             <div class="profile-name">
+                 <div class="site-heading">
                         <h1>Alumni Database</h1>
                         <hr class="small">
-                       
+                        <span class="subheading"> Find Fellow Alumni iXers</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -27,9 +25,9 @@
                 Search for alumni in database
             </h2>
             <h3 class="post-subtitle-profile"> </h3>
-            <%= form_tag profiles_search_path, method: :get, class: "search-form" do %>
+            <div class="searchbar" ><%= form_tag profiles_search_path, method: :get, class: "search-form" do %>
 				<%= text_field_tag :q, params[:q] %>
-				<%= submit_tag "Search" %>
+				<%= submit_tag "Search" %> </div>
 			<% end %>
         </div>
 	</div>
@@ -61,13 +59,9 @@
 		        <% end %>
 		    </tbody>
 		</table>
-<<<<<<< HEAD
-</div>	
-=======
 	</div>
 </div>
-	
->>>>>>> 7c5387b2fa31ab83fa18f1d32a7e003e9e59d227
+
 
 
  
