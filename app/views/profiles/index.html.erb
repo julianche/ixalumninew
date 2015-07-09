@@ -1,7 +1,11 @@
     <div class="header">
     </div>    <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
+<<<<<<< HEAD
     <header class="intro-header" style="background-image: <%= current_user.profile %>">
+=======
+    <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
+>>>>>>> 7c5387b2fa31ab83fa18f1d32a7e003e9e59d227
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -16,22 +20,22 @@
     </header>
 
 <!-- Main Content -->
-<div class ="container">
 <div class="row">
- 		<div class="col-lg-4 col-lg-offset-4  col-md-10 col-md-offset-1">
+	<div class="col-sm-6 col-sm-offset-3">
 		<div class="post-preview">
-                        <h2 class="post-title-profile">
-                            Search for alumni in database
-                        </h2>
-                    </a>
-                    <h3 class="post-subtitle-profile"> <%= form_tag profiles_search_path, method: :get do %>
-	<%= text_field_tag :q, params[:q] %>
-	<%= submit_tag "Search" %>
-<% end %></h3>
-                </div>
-                </div>
+            <h2 class="post-title-profile">
+                Search for alumni in database
+            </h2>
+            <h3 class="post-subtitle-profile"> </h3>
+            <%= form_tag profiles_search_path, method: :get, class: "search-form" do %>
+				<%= text_field_tag :q, params[:q] %>
+				<%= submit_tag "Search" %>
+			<% end %>
+        </div>
+	</div>
+</div>
 <div class="row">
-         <div class="col-lg-12">
+    <div class="col-lg-12">
            
          <table class='table'>
 
@@ -47,7 +51,7 @@
         	</thead>
         	<tbody>
         	 <% @profiles.each do |profile| %>
-        			<tr>
+        		<tr>
 		            <td><%= link_to profile.firstname, profile_path(profile) %></td>
 		            <td><%=profile.ixyear %></td>
 		            <td><%=profile.session%></td>
@@ -57,7 +61,13 @@
 		        <% end %>
 		    </tbody>
 		</table>
+<<<<<<< HEAD
 </div>	
+=======
+	</div>
+</div>
+	
+>>>>>>> 7c5387b2fa31ab83fa18f1d32a7e003e9e59d227
 
 
  

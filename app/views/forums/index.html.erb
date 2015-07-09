@@ -1,6 +1,6 @@
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/home-bg.jpg')">
+    <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
@@ -17,7 +17,7 @@
     <!-- Main Content -->
     <div class="container">
         <div class="row">
-                <% @forum.each do |forum| %>
+            <% @forum.each do |forum| %>
                 <div class="col-lg-4 col-md-4 col-sm-4">
                     <h2 class="post-title">
                         <%= link_to forum.name, forum_path(forum) %>
@@ -26,7 +26,7 @@
                         <%= forum.description %>
                     </h3>
                 </div>
-                <% end %> 
+            <% end %> 
             
         </div>
     </div>
@@ -68,12 +68,3 @@
             </div>
         </div>
     </footer>
-    <h1>Forums#index</h1>
-    <p>Find me in app/views/forums/index.html.erb</p>
-
-    <%= link_to "New Forum", new_forum_path %>
-
-    <ul>
-        <% @forum.each do |forum| %>
-        <li> <%= link_to forum.name, forum_path(forum) %> </li>
-        <% end %>

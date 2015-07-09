@@ -1,16 +1,42 @@
-<h1> <%= @post.title %> </h1>
-<p><%= @post.body %> </p>
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header class="intro-header" style="background-color: black">
+         <div class="container">
+             <div class="row">
+                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                 <div class="profile-name">
+                     <div class="site-heading">
+                         <h1><%= @post.title %></h1>
 
-<p><%= link_to 'Edit', edit_forum_post_path(@forum, @post) %> | <%= link_to 'Destroy', forum_post_path(@forum, @post),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></p>
-
-<p><%= link_to 'Back to Forum', forum_path(@forum) %>
-
-<% if @post.comments.count > 0 %>
-	<%= render @post.comments.reverse %>
-	<%= @comment.created_at %>
-<% end %> 
+                         <hr class="small">
+                         </div>
+                     </div>
+                 </div>
+             </div>
+         </div>
+     </header>
+    <br><br><br>
 
 
-<%= render 'comments/form' %>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+			<h1> <%= @post.title %> </h1>
+			<p><%= @post.body %> </p>
+
+			<p><%= link_to 'Edit', edit_forum_post_path(@forum, @post) %> | <%= link_to 'Destroy', forum_post_path(@forum, @post),
+			              method: :delete,
+			              data: { confirm: 'Are you sure?' } %></p>
+
+			<p><%= link_to 'Back to Forum', forum_path(@forum) %></p>
+
+			<% if @post.comments.count > 0 %>
+				<%= render @post.comments.reverse %>
+				<%= @comment.created_at %>
+			<% end %> 
+
+
+			<%= render 'comments/form' %>
+		</div>
+	</div>
+</div>

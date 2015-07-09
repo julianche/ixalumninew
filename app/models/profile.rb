@@ -3,6 +3,6 @@ class Profile < ActiveRecord::Base
 	belongs_to :user
 
 	def self.search(query)
-		where("occupation LIKE ? or city LIKE ?", "%#{query}%", "%#{query}%")
+		where("firstname LIKE :query OR lastname LIKE :query OR occupation LIKE :query OR city LIKE :query", query: "%#{query}%")
 	end
 end
