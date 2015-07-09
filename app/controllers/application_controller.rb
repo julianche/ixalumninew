@@ -7,4 +7,8 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for(user)
     session["user_return_to"] || root_path
   end
+
+  def show
+  	@profile = Profile.find(params[:id])
+  end
 end

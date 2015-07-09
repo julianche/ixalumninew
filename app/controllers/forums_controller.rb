@@ -8,7 +8,6 @@ class ForumsController < ApplicationController
 
 
   def create
-    #must make for admins only
     @forum = Forum.new(forum_params)
     
     if @forum.save

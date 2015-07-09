@@ -7,8 +7,6 @@ class PostsController < ApplicationController
 		@forum = Forum.find(params[:forum_id])
 		@post = @forum.posts.build(post_params)
 		@post.user = current_user
-		# @user = User.find(params:[:user_id])
-		# @user = User.find(params[:user_id])
 		if @post.save 
 			redirect_to @forum
 		else 
@@ -32,7 +30,6 @@ class PostsController < ApplicationController
 
 	def index
 		@posts = Forum.find(params[:forum_id]).posts
-		#@post = Post.all
 	end 
 
 	def update

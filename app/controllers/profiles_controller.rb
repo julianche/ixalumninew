@@ -14,17 +14,20 @@ class ProfilesController < ApplicationController
 
 	def show
 		@profile = Profile.find(params[:id])
+		@profile.firstname = current_user.firstname
+	    @profile.lastname = current_user.lastname
 		@name = @profile.firstname
 		@surname = @profile.lastname
 	end
 
 	def create
-	    @profile = Profile.new(profile_params)
+	    @profile = Profile.create!(profile_params)
 	    @profile.user = current_user
 	    @profile.firstname = current_user.firstname
 	    @profile.lastname = current_user.lastname
 	    if @profile.save
 	    	redirect_to home_path
+
 	    else
 	    	render "new"
 	    end
@@ -46,6 +49,6 @@ class ProfilesController < ApplicationController
 
 	private
 	def profile_params
-		params.require(:profile).permit(:image, :image_url, :occupation, :degree, :ixyear, :session, :university, :email, :city, :country )
+		params.require(:profile).permit(:image, :occupation, :degree, :ixyear, :session, :university, :email, :city, :country )
 	end
 end
