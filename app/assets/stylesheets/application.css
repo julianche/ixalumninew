@@ -10,90 +10,9 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require clean-blog
-  *= require profiles
+ *= require profiles
+ *= require_tree .
  *= require_self
 
  */
-h2 {
-	text-align: center;
-}
-
-
- .profile {
- 	text-align: center;
- }
-
- h1 {
- 	font-family: 'Montserrat', sans-serif;
- 	font-size: 60px;
- 	text-align: center;
- }
-
- #searchbox
- {          
-     width: 500px;
-     height: 35px;
-     padding: 10px;
-     margin: 100px auto 50px;
-    
- }
-
- .profile_picture {
- 	width: 50px;
- 	height: 50px;
- }
-
-.searchbar{
-	text-align: center;
-}
-.forum-description {
-	text-align: center;
-}
-.profile-new {
-	text-align: center;
-}
- .header {
- 	width:100%;
- 	height: 50px;
- 	background-image: url('img/post-bg.jpg') 
- }
-a {
-	color: white;
-}
-
-.post-title-profile {
-	text-align: center;
-}
-
-.post-subtitle-profile {
-	text-align: center;
-}
-
-.welcome-header {
-	background-image: url('images/cape_town_overview.jpg');
-	height: 100vh;
-	text-align: center;
-}
-
-.homepage-heading {
-padding: 100px 0 50px;
-  color: white;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-
-.link:hover {
-	text-decoration: none ;
-	color: white;
-}
-.link {
-	text-decoration: none ;
-	color: white;
-}
-img {
-	margin: 0px 52px 0px 52px;
-	width: 200px;
-	height: 200px;
-}

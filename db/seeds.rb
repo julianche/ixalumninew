@@ -6,9 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-	Forum.delete_all 
+Forum.delete_all 
 
-	forums = Forum.create([
+forums = Forum.create([
 		{ name: 'ixNews' , description: 'News about iX' },
 		{ name: 'Projects' , description: 'Post about projects you are working on' },
 		{ name: 'Miscellaneous' , description: 'Anything you want!' }
