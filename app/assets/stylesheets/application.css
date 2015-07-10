@@ -59,6 +59,9 @@ h2 {
  	height: 50px;
  	background-image: url('img/post-bg.jpg') 
  }
+a {
+	color: white;
+}
 
 .post-title-profile {
 	text-align: center;

@@ -31,8 +31,6 @@ gem 'devise'
 
 gem 'country_select'
 
-# gem 'fog'
-
 gem 'rails_12factor'
 
 # Use ActiveModel has_secure_password

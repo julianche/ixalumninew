@@ -8,9 +8,9 @@
                         <h1> <%= @forum.name %> </h1>
                         <hr class="small">
                         <span class="subheading"> <%= @forum.description %> </span>
-                        <p><%= link_to 'Edit', edit_forum_path(@forum) %> | <%= link_to 'Destroy', forum_path(@forum),
+                        <p><div class = "link"><%= link_to 'Edit', edit_forum_path(@forum) %> | <%= link_to 'Delete', forum_path(@forum),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %></p>
+              data: { confirm: 'Are you sure?' } %></div></p>
                     </div>
                 </div>
             </div>
@@ -34,8 +34,6 @@
                         </div>
                         <hr>
                     <% end %>
-                <% else %>
-                   <div class = "forum-description">  No posts here yet!
                 <% end %>
                 <!-- Pager -->
 <!--                 <ul class="pager">
