@@ -26,7 +26,6 @@
 
 			<% if @post.comments.count > 0 %>
 				<%= render @post.comments.reverse %>
-				<%= time_ago_in_words(@comment.created_at) unless @comment.created_at.blank? %>
 			<% end %> 
 
 
