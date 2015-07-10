@@ -16,10 +16,10 @@
  *= require_self
 
  */
-
 h2 {
 	text-align: center;
 }
+
 
  .profile {
  	text-align: center;
@@ -80,8 +80,17 @@ padding: 100px 0 50px;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
-.profile {
-	text-align: center;
 
+.link:hover {
+	text-decoration: none ;
+	color: white;
 }
-scss
+.link {
+	text-decoration: none ;
+	color: white;
+}
+img {
+	margin: 0px 52px 0px 52px;
+	width: 200px;
+	height: 200px;
+}

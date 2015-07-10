@@ -18,20 +18,22 @@
 <br><br><br>
 
 
-    <div class = "profile_picture" >
-        <img src="<%=@profile.image_url %>">
-    </div>
-<div class = "profile" >
+<div class = "col-md-4 col-md-offset-1" >
 	<td><h3>iX year </h3><%=@profile.ixyear%></td>
 	<h3>Session </h3> <%=@profile.session%>
-	<h3>Degree </h3> <%=@profile.degree%>
-	<h3>University </h3> <%=@profile.university%>
-	<h3>Occupation </h3> <%=@profile.occupation%>
-	<h3>City </h3> <%=@profile.city%>
+	<h3>Degree </h3> <%=@profile.degree.capitalize%>
+	<h3>University </h3> <%=@profile.university.capitalize%>
+	<h3>Occupation </h3> <%=@profile.occupation.capitalize%>
+	<h3>City </h3> <%=@profile.city.capitalize%>
 	<h3>Country </h3> <%=@profile.country%>
 
-	<h2>Contact details</h2>
-	<h3>Email</h3> <%= current_user.email%>
 </div>
+
+<div class = "col-md-4 col-md-offset-1" >
+     <img src="<%=@profile.image_url %>">
+    <h2>Contact details</h2>
+    <h3>Email</h3> <%= current_user.email%>
+</div>
+
 
 
