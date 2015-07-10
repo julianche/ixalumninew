@@ -10,7 +10,11 @@
 	text-align: center;
 }
 
-
+.forumindex {
+	text-align: center;
+	text-decoration: none;
+	padding-top: 10px;
+}
  .profile {
  	text-align: center;
  }

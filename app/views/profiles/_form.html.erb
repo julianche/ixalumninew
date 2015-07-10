@@ -12,10 +12,10 @@
       <%= f.input_field :image_url %>
       <%= f.input :ixyear, collection: ["2014", "2015"], label: 'Year', as: :select, :include_blank => false %>
       <%= f.input :session, collection: ["A","1", "2", "3"], label: "Session", as: :select, :include_blank => false  %>
-      <%= f.input :university, label: "University", placeholder: "e.g University of Harvard" %>
-      <%= f.input :city, label: "City" %>
-      <%= f.input :occupation %>
-      <%= f.input :degree, placeholder: "e.g BCom Accounting, MBCHB" %>
+      <%= f.input :university, label: "University", placeholder: "e.g. Yale" %>
+      <%= f.input :city, label: "City where you live" %>
+      <%= f.input :occupation, label: "Firm of Employment", placeholder: "e.g. Oracle" %>
+      <%= f.input :degree, placeholder: "e.g. Computer Science" %>
       <%= f.country_select(:country, ["United States", "South Africa"]) %>
     </div>
 
